@@ -1,6 +1,5 @@
 
 import 'package:blookyapp/core/utils/styles.dart';
-import 'package:blookyapp/features/home/presentation/views/widgets/best_seller_list_view_item.dart';
 import 'package:blookyapp/features/home/presentation/views/widgets/bestsellerlistview.dart';
 import 'package:blookyapp/features/home/presentation/views/widgets/customappbar.dart';
 import 'package:blookyapp/features/home/presentation/views/widgets/listviewbooks.dart';
