@@ -1,6 +1,7 @@
 import 'package:blookyapp/features/Splash/presentation/views/splash_view.dart';
 import 'package:blookyapp/features/home/presentation/views/book_details_view.dart';
 import 'package:blookyapp/features/home/presentation/views/home_view.dart';
+import 'package:blookyapp/features/search/presentation/views/search_view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -29,6 +30,10 @@ abstract class AppRouter {
       //     ),
       //   ),
       // ),
+      GoRoute(
+        path: kSearchView,
+        builder: (context, state) => const SearchView(),
+      ),
     ],
   );
 }
