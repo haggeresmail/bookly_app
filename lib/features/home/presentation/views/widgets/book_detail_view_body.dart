@@ -1,6 +1,9 @@
 import 'package:blookyapp/core/utils/styles.dart';
-import 'package:blookyapp/features/home/presentation/views/widgets/best_seller_list_view_item.dart';
+
+import 'package:blookyapp/features/home/presentation/views/widgets/book_action.dart';
+
 import 'package:blookyapp/features/home/presentation/views/widgets/book_details_appbar.dart';
+import 'package:blookyapp/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:blookyapp/features/home/presentation/views/widgets/custom_book_image_item.dart';
 import 'package:flutter/material.dart';
 
@@ -43,8 +46,14 @@ class BookDetailsViewBody extends StatelessWidget {
           const BookRating(
             mainAxisAlignment: MainAxisAlignment.center,
           ),
+          const SizedBox(
+            height: 37,
+          ),
+         const BookAction(),
         ],
       ),
     );
   }
 }
+
+
