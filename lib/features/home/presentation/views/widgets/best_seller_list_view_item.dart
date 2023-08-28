@@ -76,27 +76,32 @@ class BestSellerListViewItem extends StatelessWidget {
 }
 
 class BookRating extends StatelessWidget {
-  const BookRating({super.key});
+  const BookRating({super.key,  this.mainAxisAlignment=MainAxisAlignment.start});
+ final MainAxisAlignment mainAxisAlignment ;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Icon(
+    return  Row(
+      mainAxisAlignment: mainAxisAlignment,
+      children: const [
+         Icon(
           FontAwesomeIcons.solidStar,
           color: Colors.yellowAccent,
           size: 15,
         ),
-        const SizedBox(
+         SizedBox(
           width: 6.3,
         ),
-        const Text(
+         Text(
           "4.8",
           style: Styles.textStyle16,
         ),
-        Text(
-          "(256)",
-          style: Styles.textStyle14.copyWith(color: Colors.grey),
+        Opacity(
+          opacity: .5,
+          child: Text(
+            "(256)",
+            style: Styles.textStyle14,
+          ),
         )
       ],
     );
