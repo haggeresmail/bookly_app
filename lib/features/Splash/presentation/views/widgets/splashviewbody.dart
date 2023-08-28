@@ -6,7 +6,6 @@ import 'package:blookyapp/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
 
@@ -26,9 +25,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
     navigateToHome();
   }
 
- 
-
-  
   @override
   void dispose() {
     // TODO: implement dispose
@@ -50,7 +46,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
       ],
     );
   }
-   void initAnimation() {
+
+  void initAnimation() {
     animationController =
         AnimationController(vsync: this, duration: const Duration(seconds: 1));
     slidinganimation =
@@ -58,11 +55,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
             .animate(animationController);
     animationController.forward();
   }
-   void navigateToHome() {
-    Future.delayed(const Duration(seconds: 2),(){
+
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 2), () {
       // Get.to(()=>const  HomeView(),transition:Transition.fade,duration: kTransationDuration );
-    GoRouter.of(context).push(AppRouter.kHomeView);
+      GoRouter.of(context).push(AppRouter.kHomeView);
     });
   }
 }
-

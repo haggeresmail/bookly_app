@@ -9,21 +9,16 @@ class BestSellerListView extends StatelessWidget {
     // return BlocBuilder<NewsetBooksCubit, NewsetBooksState>(
     //   builder: (context, state) {
     //     if (state is NewsetBooksSuccess) {
-          return ListView.builder(
-         
-            physics: const NeverScrollableScrollPhysics(),
-            padding: EdgeInsets.zero,
-            itemCount:10,
-            itemBuilder: (context, index) {
-              return const Padding(
-                padding:  EdgeInsets.symmetric(vertical: 10),
-                child: BestSellerListViewItem(
-                 
-                ),
-              );
-            },
-          );
-        
-    
+    return ListView.builder(
+      physics: const NeverScrollableScrollPhysics(),
+      padding: EdgeInsets.zero,
+      itemCount: 10,
+      itemBuilder: (context, index) {
+        return const Padding(
+          padding: EdgeInsets.symmetric(vertical: 10),
+          child: BestSellerListViewItem(),
+        );
+      },
+    );
   }
 }
