@@ -1,4 +1,5 @@
 import 'package:blookyapp/features/home/presentation/views/widgets/book_details_appbar.dart';
+import 'package:blookyapp/features/home/presentation/views/widgets/custom_book_image_item.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -6,15 +7,18 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 20),
-      child:  Column(
+    var width = MediaQuery.of(context).size.width;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30),
+      child: Column(
         children: [
-          CustomBookDetailAppBar(),
+          const CustomBookDetailAppBar(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: width * .17),
+            child: const CustomBookImageItem(),
+          ),
         ],
       ),
     );
   }
 }
-
-

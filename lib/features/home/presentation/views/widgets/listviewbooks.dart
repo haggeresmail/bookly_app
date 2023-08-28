@@ -1,4 +1,4 @@
-import 'package:blookyapp/features/home/presentation/views/widgets/customlistviewitem.dart';
+import 'package:blookyapp/features/home/presentation/views/widgets/custom_book_image_item.dart';
 import 'package:flutter/material.dart';
 
 class ListViewItems extends StatelessWidget {
@@ -12,8 +12,8 @@ class ListViewItems extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return const Padding(
-            padding: EdgeInsets.symmetric(horizontal:1),
-            child: CustomListViewItem(),
+            padding: EdgeInsets.symmetric(horizontal: 1),
+            child: CustomBookImageItem(),
           );
         },
       ),
