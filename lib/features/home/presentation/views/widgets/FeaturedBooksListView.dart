@@ -1,8 +1,8 @@
 import 'package:blookyapp/features/home/presentation/views/widgets/custom_book_image_item.dart';
 import 'package:flutter/material.dart';
 
-class ListViewItems extends StatelessWidget {
-  const ListViewItems({super.key});
+class FeaturedBooksListView extends StatelessWidget {
+  const FeaturedBooksListView({super.key});
 
   @override
   Widget build(BuildContext context) {

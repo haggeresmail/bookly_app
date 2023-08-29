@@ -1,7 +1,7 @@
 import 'package:blookyapp/core/utils/styles.dart';
 import 'package:blookyapp/features/home/presentation/views/widgets/bestsellerlistview.dart';
 import 'package:blookyapp/features/home/presentation/views/widgets/customappbar.dart';
-import 'package:blookyapp/features/home/presentation/views/widgets/listviewbooks.dart';
+import 'package:blookyapp/features/home/presentation/views/widgets/FeaturedBooksListView.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -19,7 +19,7 @@ class HomeViewBody extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: CustomAppBar(),
               ),
-              ListViewItems(),
+              FeaturedBooksListView(),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
