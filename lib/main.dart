@@ -26,7 +26,7 @@ class BlookyApp extends StatelessWidget {
         BlocProvider(
             create: (context) => FeaturedBooksCubit(
                   getIt.get<HomeRepoImp>(),
-                ),),
+                )..fetachFeaturedBooks()),
                 BlocProvider(
             create: (context) => NewsetBooksCubit(
                   getIt.get<HomeRepoImp>(),
