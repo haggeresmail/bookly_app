@@ -14,8 +14,8 @@ final class  NewsetBooksFailure extends NewsetBooksState {
 
  const  NewsetBooksFailure(this.errMessage);
 }
-final class FeaturedBooksSuccess extends NewsetBooksState {
+final class NewsetBooksSuccess extends NewsetBooksState {
   final List<BookModel> books;
 
- const FeaturedBooksSuccess(this.books);
+ const NewsetBooksSuccess(this.books);
 }
