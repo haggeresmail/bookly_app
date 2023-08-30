@@ -48,7 +48,7 @@ final BookModel bookModel;
         const SizedBox(
           height: 20,
         ),
-        const BookAction(),
+         BookAction(bookModel: bookModel,),
       ],
     );
   }
