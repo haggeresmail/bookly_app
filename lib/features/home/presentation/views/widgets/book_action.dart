@@ -1,7 +1,8 @@
+import 'package:blookyapp/core/utils/functions/launch_url.dart';
 import 'package:blookyapp/core/widgets/custom_button.dart';
 import 'package:blookyapp/features/home/Data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 
 class BookAction extends StatelessWidget {
   const BookAction({super.key, required this.bookModel});
@@ -26,12 +27,9 @@ class BookAction extends StatelessWidget {
           ),
           Expanded(
             child: CustomButton(
-               onPressed: ()async {
-                Uri uri= Uri.parse(bookModel.volumeInfo.previewLink!);
-                 if (await canLaunchUrl(uri)) {
-                  await launchUrl(uri);
-   
-  }
+               onPressed: () {
+                customLunchUrl(context, bookModel.volumeInfo.previewLink);
+  
               },
                 backgroundColor: Color.fromARGB(255, 220, 79, 13),
                 textcolor: Colors.black,
@@ -39,10 +37,20 @@ class BookAction extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(16),
                     bottomRight: Radius.circular(16)),
-                text: "Free Preview"),
+                text:getText(bookModel)),
           ),
         ],
       ),
     );
+  }
+
+  String getText(BookModel bookModel){
+    if(bookModel.volumeInfo.previewLink==null)
+    {
+      return " NOT avilabele";
+    }
+    else{
+      return "Preview";
+    }
   }
 }
