@@ -30,7 +30,7 @@ class BlookyApp extends StatelessWidget {
                 BlocProvider(
             create: (context) => NewsetBooksCubit(
                   getIt.get<HomeRepoImp>(),
-                ),),
+                )..fetachNewsetBooks()),
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
