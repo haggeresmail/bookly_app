@@ -1,6 +1,6 @@
 import 'package:blookyapp/constants.dart';
 import 'package:blookyapp/core/utils/app_router.dart';
-import 'package:blookyapp/core/utils/assets.dart';
+
 import 'package:blookyapp/core/utils/styles.dart';
 import 'package:blookyapp/features/home/Data/models/book_model/book_model.dart';
 import 'package:blookyapp/features/home/presentation/views/widgets/book_rating.dart';

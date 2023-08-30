@@ -14,10 +14,17 @@ class CustomBookImageItem extends StatelessWidget {
         child: CachedNetworkImage(
           fit: BoxFit.fill,
           imageUrl: imageUrl,
-          errorWidget: (context, url, error) => const  Icon(Icons.error),
-           placeholder: (context, url) => const Center(child: CircularProgressIndicator(),),
+          // errorWidget: (context, url, error) => const  Icon(Icons.error),
+          
+          errorWidget: (context, url, error) => const Center(
+    child: Icon(
+      Icons.error,
+      color: Colors.red,
+    ),
+         
+          //  placeholder: (context, url) => const Center(child: CircularProgressIndicator(),),
         ),
       ),
-    );
+      )  );
   }
 }

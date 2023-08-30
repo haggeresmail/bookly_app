@@ -1,8 +1,6 @@
-import 'package:blookyapp/constants.dart';
 import 'package:blookyapp/core/utils/app_router.dart';
 import 'package:blookyapp/core/utils/assets.dart';
 import 'package:blookyapp/features/Splash/presentation/views/widgets/slidingtext.dart';
-import 'package:blookyapp/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
