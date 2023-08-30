@@ -1,9 +1,9 @@
-import 'package:blookyapp/core/utils/assets.dart';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomBookImageItem extends StatelessWidget {
-  const CustomBookImageItem({super.key, required this.imageUrl});
+  const CustomBookImageItem({Key? key, required this.imageUrl}) : super(key: key);
   final String imageUrl;
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,8 @@ class CustomBookImageItem extends StatelessWidget {
         child: CachedNetworkImage(
           fit: BoxFit.fill,
           imageUrl: imageUrl,
-          errorWidget: (context, url, error) => const Icon(Icons.error),
-          // placeholder: (context, url) => const Center(child: CircularProgressIndicator(),),
+          errorWidget: (context, url, error) => const  Icon(Icons.error),
+           placeholder: (context, url) => const Center(child: CircularProgressIndicator(),),
         ),
       ),
     );

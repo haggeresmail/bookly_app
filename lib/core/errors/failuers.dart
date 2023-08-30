@@ -1,42 +1,42 @@
-import 'dart:io';
+
 
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
+
 
 abstract class Failure{
   final String errMessage;
 
-  Failure(this.errMessage);
+const  Failure(this.errMessage);
 
 }
 class ServerFailure extends Failure{
   ServerFailure(super.errMessage);
-  factory ServerFailure.fromDioError(DioError dioError){
+  factory ServerFailure.fromDioError( DioException dioError){
     switch(dioError.type){
       
-      case DioErrorType.connectionTimeout:
+      case DioExceptionType.connectionTimeout:
         // TODO: Handle this case.
         return ServerFailure("connection Time Out with api server");
-      case DioErrorType.sendTimeout:
+      case  DioExceptionType.sendTimeout:
         // TODO: Handle this case.
          return ServerFailure( "send Time Out with api server");
-      case DioErrorType.receiveTimeout:
+      case  DioExceptionType.receiveTimeout:
        return ServerFailure( "receive Time Out with api server");
         // TODO: Handle this case.
-      case DioErrorType.badCertificate:
+      case  DioExceptionType.badCertificate:
       return ServerFailure("receive Time Out with api server");
       
         // TODO: Handle this case.
-      case DioErrorType.badResponse:
+      case  DioExceptionType.badResponse:
       return ServerFailure.fromResponse(dioError.response!.statusCode!, dioError.response!.data);
         // TODO: Handle this case.
-      case DioErrorType.cancel:
+      case  DioExceptionType.cancel:
       return ServerFailure("request with api server cancelled");
         // TODO: Handle this case.
-      case DioErrorType.connectionError:
+      case  DioExceptionType.connectionError:
        return ServerFailure("connectionError with api server cancelled");
         // TODO: Handle this case.
-      case DioErrorType.unknown:
+      case  DioExceptionType.unknown:
       if(dioError.message!.contains('SocketException')){
         return ServerFailure("no internet");
       }

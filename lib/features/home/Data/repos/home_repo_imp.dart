@@ -14,15 +14,19 @@ class HomeRepoImp extends HomeRepo {
    try {
   var data=  await apiService.get(
        endpoint:
-           'volumes?Filtering=free-ebooks&Sorting=newest &q=subject:Programming');
+           'volumes?Filtering=free-ebooks&Sorting=newest &q=computer science');
            List<BookModel> books=[];
            for (var item in data["items"]) {
-            books.add(BookModel.fromJson(item));
-             
-           }
-           return right(books);
+            try {
+  books.add(BookModel.fromJson(item));
+}  catch (e) {
+ books.add(BookModel.fromJson(item));
+  // TODO
+}}
+  return right(books);
 } catch (e) {
-  if(e is DioError){
+ 
+  if(e is DioException){
   return left(ServerFailure.fromDioError(e));
   }
   return left(ServerFailure(e.toString()));
@@ -43,7 +47,31 @@ class HomeRepoImp extends HomeRepo {
            }
            return right(books);
 } catch (e) {
-  if(e is DioError){
+ 
+  if(e is DioException){
+  return left(ServerFailure.fromDioError(e));
+  }
+  return left(ServerFailure(e.toString()));
+  // TODO
+}
+  }
+  
+  @override
+  Future<Either<Failure, List<BookModel>>> fetechSimilarBooks({required String category})async {
+    // TODO: implement fetechSimilarBooks
+    try {
+  var data=  await apiService.get(
+       endpoint:
+           'volumes?Filtering=free-ebooks&Sorting=relevance&q=subject:Programming');
+           List<BookModel> books=[];
+           for (var item in data["items"]) {
+            books.add(BookModel.fromJson(item));
+             
+           }
+           return right(books);
+} catch (e) {
+ 
+  if(e is DioException){
   return left(ServerFailure.fromDioError(e));
   }
   return left(ServerFailure(e.toString()));
